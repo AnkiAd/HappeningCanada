@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CanadaMasterViewController : UIViewController
+@interface CanadaMasterViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+    @property (nonatomic,strong) NSArray *canadaData; 
+    //@property (nonatomic,strong) NSArray *fruits;
 
 @end
