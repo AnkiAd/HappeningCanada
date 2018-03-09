@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CanadaMasterViewController.h
 //  HappeningCanada
 //
 //  Created by Ani Adhikary on 10/03/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CanadaMasterViewController : UIViewController
 
 @end
-
