@@ -19,7 +19,7 @@
     if (self) {
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 300, 30)];
         self.titleLabel.textColor = [UIColor blackColor];
-        self.titleLabel.font = [UIFont fontWithName:@"Arial" size:16.0f];
+        self.titleLabel.font = [UIFont fontWithName:@"Arial" size:19.0f];
         
 //        self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, 300, 30)];
 //        self.descriptionLabel.textColor = [UIColor blackColor];
