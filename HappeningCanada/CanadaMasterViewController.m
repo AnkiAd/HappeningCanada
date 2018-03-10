@@ -55,7 +55,6 @@
                                           NSString *title = dict[@"title"];
                                           
                                           NSDictionary *rowsDict = dict[@"rows"];
-                                          NSLog(@"Title is: %@",title);
                                           
                                           for(NSDictionary *row in rowsDict) {
                                               NSString *titleString = [row objectForKey:@"title"];
@@ -87,8 +86,9 @@
                                           } // for end
                                           
                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                              //UI update code goes here
+                                              self.navigationItem.title = title;
                                               [canadaMasterTableView reloadData];
-                                              // Your UI update code here
                                           });
                                       }
                                   }];

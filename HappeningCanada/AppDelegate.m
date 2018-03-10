@@ -26,8 +26,6 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController: canadaMasterVC];
     navigationController.navigationBar.barTintColor = [UIColor redColor];
     
-    navigationController.topViewController.title = @"About Canada";
-    
     self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
