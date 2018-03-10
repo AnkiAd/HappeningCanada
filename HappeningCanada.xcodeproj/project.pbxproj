@@ -13,6 +13,7 @@
 		AF2E687C20530A6A002EB635 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E687B20530A6A002EB635 /* main.m */; };
 		AF2E688420530CB6002EB635 /* CanadaMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */; };
 		AF2E688720530F91002EB635 /* CanadaInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */; };
+		AF2E68DA20546AEB002EB635 /* CanadaInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E68D920546AEB002EB635 /* CanadaInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanadaMasterViewController.m; sourceTree = "<group>"; };
 		AF2E688520530F91002EB635 /* CanadaInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanadaInfoTableViewCell.h; sourceTree = "<group>"; };
 		AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanadaInfoTableViewCell.m; sourceTree = "<group>"; };
+		AF2E68D820546AEB002EB635 /* CanadaInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanadaInfo.h; sourceTree = "<group>"; };
+		AF2E68D920546AEB002EB635 /* CanadaInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanadaInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */,
 				AF2E688520530F91002EB635 /* CanadaInfoTableViewCell.h */,
 				AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */,
+				AF2E68D820546AEB002EB635 /* CanadaInfo.h */,
+				AF2E68D920546AEB002EB635 /* CanadaInfo.m */,
 			);
 			path = HappeningCanada;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			files = (
 				AF2E687C20530A6A002EB635 /* main.m in Sources */,
 				AF2E686E20530A6A002EB635 /* AppDelegate.m in Sources */,
+				AF2E68DA20546AEB002EB635 /* CanadaInfo.m in Sources */,
 				AF2E688420530CB6002EB635 /* CanadaMasterViewController.m in Sources */,
 				AF2E688720530F91002EB635 /* CanadaInfoTableViewCell.m in Sources */,
 			);
