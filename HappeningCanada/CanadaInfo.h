@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface CanadaInfo : NSObject
-    @property NSString *titleDetail;
-    @property NSString *descriptionDetail;
-    @property NSString *imageHref;
+    @property (strong, nonatomic) NSString *titleDetail;
+    @property (strong, nonatomic) NSString *descriptionDetail;
+    @property (strong, nonatomic) NSString *imageHref;
+
+    - (id)initWithDictionary:(NSDictionary *) dataDictionary;
 @end
