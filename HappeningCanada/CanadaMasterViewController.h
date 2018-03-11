@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FactsInfo.h"
 
 @interface CanadaMasterViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *canadaInfoArray;
+    
+    UITableView *tableView;
+    UIActivityIndicatorView *progressView;
+    UIRefreshControl *refreshControl;
+    
+    FactsInfo *factInfo;
 }
 
 @end
