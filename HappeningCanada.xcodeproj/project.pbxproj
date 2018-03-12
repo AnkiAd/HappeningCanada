@@ -14,7 +14,6 @@
 		AF2E688420530CB6002EB635 /* CanadaMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */; };
 		AF2E688720530F91002EB635 /* CanadaInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */; };
 		AF2E68DA20546AEB002EB635 /* CanadaInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E68D920546AEB002EB635 /* CanadaInfo.m */; };
-		AF6AEA652055BC4300B0B7F4 /* UIView+AutolayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEA642055BC4300B0B7F4 /* UIView+AutolayoutView.m */; };
 		AF6AEAA62055DD0A00B0B7F4 /* FactsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */; };
 		AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */; };
 /* End PBXBuildFile section */
@@ -33,8 +32,6 @@
 		AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanadaInfoTableViewCell.m; sourceTree = "<group>"; };
 		AF2E68D820546AEB002EB635 /* CanadaInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanadaInfo.h; sourceTree = "<group>"; };
 		AF2E68D920546AEB002EB635 /* CanadaInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanadaInfo.m; sourceTree = "<group>"; };
-		AF6AEA632055BC4300B0B7F4 /* UIView+AutolayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AutolayoutView.h"; sourceTree = "<group>"; };
-		AF6AEA642055BC4300B0B7F4 /* UIView+AutolayoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutolayoutView.m"; sourceTree = "<group>"; };
 		AF6AEAA42055DD0A00B0B7F4 /* FactsInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactsInfo.h; sourceTree = "<group>"; };
 		AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactsInfo.m; sourceTree = "<group>"; };
 		AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClient.m; sourceTree = "<group>"; };
@@ -52,6 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF22F2ED2056912700272D3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF2E686C20530A6A002EB635 /* AppDelegate.h */,
+				AF2E686D20530A6A002EB635 /* AppDelegate.m */,
+				AF2E687520530A6A002EB635 /* Assets.xcassets */,
+				AF2E687720530A6A002EB635 /* LaunchScreen.storyboard */,
+				AF2E687A20530A6A002EB635 /* Info.plist */,
+				AF2E687B20530A6A002EB635 /* main.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		AF2E686020530A6A002EB635 = {
 			isa = PBXGroup;
 			children = (
@@ -71,28 +81,13 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
-				AF2E686C20530A6A002EB635 /* AppDelegate.h */,
-				AF2E686D20530A6A002EB635 /* AppDelegate.m */,
-				AF2E687520530A6A002EB635 /* Assets.xcassets */,
-				AF2E687720530A6A002EB635 /* LaunchScreen.storyboard */,
-				AF2E687A20530A6A002EB635 /* Info.plist */,
-				AF2E687B20530A6A002EB635 /* main.m */,
+				AF22F2ED2056912700272D3B /* App */,
 				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
 				AF6AEAAC2055EC4000B0B7F4 /* CustomTableViewCell */,
 				AF6AEAA72055DE5200B0B7F4 /* Networking */,
 				AF6AEAA32055DAE900B0B7F4 /* Model */,
-				AF6AEA662055BCAC00B0B7F4 /* Category */,
 			);
 			path = HappeningCanada;
-			sourceTree = "<group>";
-		};
-		AF6AEA662055BCAC00B0B7F4 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				AF6AEA632055BC4300B0B7F4 /* UIView+AutolayoutView.h */,
-				AF6AEA642055BC4300B0B7F4 /* UIView+AutolayoutView.m */,
-			);
-			name = Category;
 			sourceTree = "<group>";
 		};
 		AF6AEAA32055DAE900B0B7F4 /* Model */ = {
@@ -206,7 +201,6 @@
 				AF6AEAA62055DD0A00B0B7F4 /* FactsInfo.m in Sources */,
 				AF2E687C20530A6A002EB635 /* main.m in Sources */,
 				AF2E686E20530A6A002EB635 /* AppDelegate.m in Sources */,
-				AF6AEA652055BC4300B0B7F4 /* UIView+AutolayoutView.m in Sources */,
 				AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */,
 				AF2E68DA20546AEB002EB635 /* CanadaInfo.m in Sources */,
 				AF2E688420530CB6002EB635 /* CanadaMasterViewController.m in Sources */,
