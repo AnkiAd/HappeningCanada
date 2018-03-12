@@ -48,9 +48,9 @@
 - (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 5, 235, 21)];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
-    self.titleLabel.font = [UIFont boldSystemFontOfSize: 22.0f];
+    self.titleLabel.font = [UIFont boldSystemFontOfSize: 20.0f];
     self.descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.titleLabel.textColor = UIColor.redColor;
+    self.titleLabel.textColor = UIColor.brownColor;
     self.titleLabel.numberOfLines = 0;
     
     [self.contentView addSubview:self.titleLabel];
@@ -97,27 +97,29 @@
 
 #pragma mark - Property Assignmnet Method
 
-- (void)setValuesToCell:(CanadaInfo *)canadaInfo {
+//Set the values in Row Elements
+- (void)setValuesToCell: (CanadaInfo *)canadaInfo {
     self.titleLabel.text = canadaInfo.titleDetail;
     self.descriptionLabel.text = canadaInfo.descriptionDetail;
     
     [self lazyLoadImageWithURLString:canadaInfo.imageHref];
 }
 
-- (void)lazyLoadImageWithURLString:(NSString *)strImgURL {
+//This method loads the images lazily from the ImageURL
+- (void)lazyLoadImageWithURLString: (NSString *)imgURLString {
     self.customImageView.image = [UIImage imageNamed:@"placeholder"];
     
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:strImgURL]
-                                                         completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                             if (data) {
-                                                                 UIImage *image = [UIImage imageWithData:data];
-                                                                 if (image) {
-                                                                     dispatch_async(dispatch_get_main_queue(), ^{
-                                                                         self.customImageView.image = image;
-                                                                     });
-                                                                 }
-                                                             }
-                                                         }];
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:imgURLString]
+    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (data) {
+                 UIImage *image = [UIImage imageWithData:data];
+                 if (image) {
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         self.customImageView.image = image;
+                     });
+                 }
+             }
+         }];
     [task resume];
 }
 
