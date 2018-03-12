@@ -7,16 +7,15 @@
 //
 
 
-#import "NetworkDataFetcher.h"
+#import "NetworkClient.h"
 
-#define NE_FectsUrl @"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+#define CanadaFactsURLString @"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
 
-@implementation NetworkDataFetcher
+@implementation NetworkClient
 
-+ (void)fetchDataRowFromServerWithCompletion:(NDF_CompletionBlock)completionBlock
-{
++ (void)fetchDataRowFromServerWithCompletion:(NDF_CompletionBlock)completionBlock {
     // Represent a URL load request
-    NSURL *URL = [NSURL URLWithString:NE_FectsUrl];
+    NSURL *URL = [NSURL URLWithString:CanadaFactsURLString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     
     // Creates a session with the specified session configuration.

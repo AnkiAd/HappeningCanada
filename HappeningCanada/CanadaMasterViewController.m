@@ -9,7 +9,7 @@
 #import "CanadaMasterViewController.h"
 #import "CanadaInfoTableViewCell.h"
 #import "CanadaInfo.h"
-#import "NetworkDataFetcher.h"
+#import "NetworkClient.h"
 
 @interface CanadaMasterViewController ()
 
@@ -19,17 +19,15 @@
     UITableView *canadaMasterTableView;
 }
 
-static NSString *CellIdentifier = @"Table_Cell";
+static NSString *CellIdentifier = @"CanadaInfoCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupInitialViews];
-    //self.title = @"Please Wait...";
+    [self fetchDataFromServer];
     
-    [self fetchJsonDataFromNetwork];
-    
-    // Pull to refresh
+    //Pull to refresh
     refreshControl = [[UIRefreshControl alloc] init];
     [tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
@@ -45,9 +43,7 @@ static NSString *CellIdentifier = @"Table_Cell";
     
     [self.view addSubview:tableView];
     
-    
     // Setting Autolayout Constraints for TableView
-    
     [tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     // Align tableView from the left/right
@@ -77,15 +73,14 @@ static NSString *CellIdentifier = @"Table_Cell";
 
 - (void)refreshTable {
     [refreshControl endRefreshing];
-    [self fetchJsonDataFromNetwork];
+    [self fetchDataFromServer];
 }
 
 #pragma mark fetching data
 
-- (void)fetchJsonDataFromNetwork
-{
+- (void)fetchDataFromServer {
     //[self showActivityOverly];
-    [NetworkDataFetcher fetchDataRowFromServerWithCompletion:^(NSDictionary *response, NSError *error) {
+    [NetworkClient fetchDataRowFromServerWithCompletion:^(NSDictionary *response, NSError *error) {
         if (error) {
             NSLog(@"NetworkDataFetcher Error: %@", error);
         }
@@ -102,79 +97,6 @@ static NSString *CellIdentifier = @"Table_Cell";
             });
         }
     }];
-}
-
--(void)fetchDataFromServer {
-    
-    NSURL *URL = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                            completionHandler:
-                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                      
-                                      NSError* errorTemp = nil;
-                                      NSString *strISOLatin = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
-                                      NSData *dataUTF8 = [strISOLatin dataUsingEncoding:NSUTF8StringEncoding];
-                                      
-                                      if (dataUTF8.length > 0 && error == nil) {
-                                          
-                                          NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:dataUTF8
-                                                                                               options:0
-                                                                                                 error:&errorTemp];
-                                          NSString *title = dict[@"title"];
-                                          
-                                          NSDictionary *rowsDict = dict[@"rows"];
-                                          
-                                          for(NSDictionary *row in rowsDict) {
-                                              NSString *titleString = [row objectForKey:@"title"];
-                                              NSString *descriptionString = [row objectForKey:@"description"];
-                                              NSString *imageHrefString = [row objectForKey:@"imageHref"];
-                                              
-                                              CanadaInfo *canadaInfoObject = [[CanadaInfo alloc] init];
-                                              
-                                              if([[self checkForNull:titleString] isEqualToString:@""]) {
-                                                  canadaInfoObject.titleDetail = @"";
-                                              } else {
-                                                  canadaInfoObject.titleDetail = titleString;
-                                              }
-                                              
-                                              if([[self checkForNull:descriptionString] isEqualToString:@""]) {
-                                                  canadaInfoObject.descriptionDetail = @"";
-                                              } else {
-                                                  canadaInfoObject.descriptionDetail = descriptionString;
-                                              }
-                                              
-                                              if([[self checkForNull:imageHrefString] isEqualToString:@""]) {
-                                                  canadaInfoObject.imageHref = @"";
-                                              } else {
-                                                  canadaInfoObject.imageHref = imageHrefString;
-                                              }
-                                              
-                                              [canadaInfoArray addObject: canadaInfoObject];
-                                              
-                                          } // for end
-                                          
-                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                              //UI update code goes here
-                                              self.navigationItem.title = title;
-                                              [canadaMasterTableView reloadData];
-                                          });
-                                      }
-                                  }];
-    
-    [task resume];
-}
-
--(id)checkForNull:(id)value {
-    if ([value isEqual:[NSNull null]]) {
-        return @"";
-    } else if (value == nil) {
-        return @"";
-    }
-    return value;
 }
 
 #pragma mark - UITableViewDataSource

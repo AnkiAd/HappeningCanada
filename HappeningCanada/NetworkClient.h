@@ -10,8 +10,7 @@
 
 typedef void(^NDF_CompletionBlock)(NSDictionary *response, NSError *error);
 
-
-@interface NetworkDataFetcher : NSObject
+@interface NetworkClient : NSObject
 
 + (void)fetchDataRowFromServerWithCompletion:(NDF_CompletionBlock)completionBlock;
 
