@@ -53,7 +53,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tableView)]];
 }
 
-- (void)showActivityOverly {
+- (void)showProgressIndicator {
     
     UIView *overlyView = [[UIView alloc] initWithFrame:self.view.frame];
     overlyView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
@@ -67,7 +67,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
     [self.view bringSubviewToFront:overlyView];
 }
 
-- (void)hideActivityOverly {
+- (void)hideProgressIndicator {
     [[progressView superview] removeFromSuperview];
 }
 
@@ -76,42 +76,42 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
     [self fetchDataFromServer];
 }
 
-#pragma mark fetching data
+#pragma mark Fetch Data from Server
 
 - (void)fetchDataFromServer {
-    //[self showActivityOverly];
+    [self showProgressIndicator];
     [NetworkClient fetchDataRowFromServerWithCompletion:^(NSDictionary *response, NSError *error) {
         if (error) {
             NSLog(@"NetworkDataFetcher Error: %@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self hideProgressIndicator];
+            });
         }
         else {
             factInfo = [[FactsInfo alloc] initWithDictionary:response];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
-                // Updateing the UI through main thread
+                // Updating the UI through main thread
                 self.title = factInfo.screenTitle;
                 
                 [tableView reloadData];
-                //[self hideActivityOverly];
+                [self hideProgressIndicator];
             });
         }
     }];
 }
 
-#pragma mark - UITableViewDataSource
-// number of section(s), now I assume there is only 1 section
+#pragma mark - UITableViewDataSource Methods
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView {
     return 1;
 }
 
-// number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return factInfo.canadaInfoArray.count;
 }
 
-// the cell will be returned to the tableView
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CanadaInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -126,8 +126,8 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
     return cell;
 }
 
-#pragma mark - Table view delegates
-
+#pragma mark - UITableViewDelegate Methods
+//This method is used to dynamically calculate the hight of a Row in TableView
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     static CanadaInfoTableViewCell *cell = nil;
     static dispatch_once_t onceToken;
