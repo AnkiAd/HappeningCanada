@@ -14,7 +14,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier
@@ -23,13 +22,13 @@
         
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         
-        // Initialization code
+        // Setting up the Table UI elements
         [self setupThumbImageView];
-        [self setupTitleTextLable];
-        [self setupDescriptionTextLable];
+        [self setupTitle];
+        [self setupDescription];
         
         // Setting UI Autolayout Constraints
-        [self setupCellUIConstraints];
+        [self setupAutoLayoutConstraintsForRow];
     }
     
     return self;
@@ -50,7 +49,7 @@
     [self.contentView addSubview:self.customImageView];
 }
 
-- (void)setupTitleTextLable
+- (void)setupTitle
 {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 5, 235, 21)];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -62,7 +61,7 @@
     [self.contentView addSubview:self.titleLabel];
 }
 
-- (void)setupDescriptionTextLable
+- (void)setupDescription
 {
     self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 31, 235, 21)];
     self.descriptionLabel.textAlignment = NSTextAlignmentJustified;
@@ -73,7 +72,7 @@
     [self.contentView addSubview:self.descriptionLabel];
 }
 
-- (void)setupCellUIConstraints
+- (void)setupAutoLayoutConstraintsForRow
 {
     [self.customImageView removeConstraints:self.customImageView.constraints];
     [self.titleLabel removeConstraints:self.titleLabel.constraints];
