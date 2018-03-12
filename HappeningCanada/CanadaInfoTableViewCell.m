@@ -97,16 +97,14 @@
 
 #pragma mark - Property Assignmnet Method
 
-- (void)setValuesToCell:(CanadaInfo *)canadaInfo
-{
+- (void)setValuesToCell:(CanadaInfo *)canadaInfo {
     self.titleLabel.text = canadaInfo.titleDetail;
     self.descriptionLabel.text = canadaInfo.descriptionDetail;
     
     [self lazyLoadImageWithURLString:canadaInfo.imageHref];
 }
 
-- (void)lazyLoadImageWithURLString:(NSString *)strImgURL
-{
+- (void)lazyLoadImageWithURLString:(NSString *)strImgURL {
     self.customImageView.image = [UIImage imageNamed:@"placeholder"];
     
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:strImgURL]
@@ -127,8 +125,7 @@
 
 float const minCellHeight = 100.0f;
 
-- (CGFloat)getHeightOfCell
-{
+- (CGFloat)getHeightOfCell {
     float width = CGRectGetWidth([[UIScreen mainScreen] bounds]) - 140;
     NSAttributedString *attributedTitle = [[NSAttributedString alloc] initWithString:self.titleLabel.text attributes:@{NSFontAttributeName:self.titleLabel.font}];
     CGRect rectTitle = [attributedTitle boundingRectWithSize:(CGSize){width, CGFLOAT_MAX}
