@@ -16,16 +16,15 @@
     [super awakeFromNib];
 }
 
-- (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier
-{
+- (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier]) {
         
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         
         // Setting up the Table UI elements
-        [self setupThumbImageView];
-        [self setupTitle];
-        [self setupDescription];
+        [self setupRowDetailImageView];
+        [self setupTitleLabel];
+        [self setupDescriptionLabel];
         
         // Setting UI Autolayout Constraints
         [self setupAutoLayoutConstraintsForRow];
@@ -34,35 +33,30 @@
     return self;
 }
 
-#pragma mark - Custom inintlization methods
+#pragma mark - Custom initialization methods
 
-- (void)setupThumbImageView
-{
+- (void)setupRowDetailImageView {
     self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
     self.customImageView.frame = CGRectMake(13, 8, 104, 84);
     self.customImageView.clipsToBounds = YES;
     [self.customImageView setContentMode:UIViewContentModeScaleAspectFill];
-    self.customImageView.layer.borderColor = [[UIColor colorWithRed:0.0f green:128.0/255.0f blue:128.0/255.0f alpha:1.0f] CGColor];
-    self.customImageView.layer.borderWidth = 3.0f;
     self.customImageView.layer.cornerRadius = 5.0f;
     
     [self.contentView addSubview:self.customImageView];
 }
 
-- (void)setupTitle
-{
+- (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 5, 235, 21)];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
     self.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
     self.descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.titleLabel.textColor = [UIColor colorWithRed:0.0f green:128.0/255.0f blue:128.0/255.0f alpha:1.0f];
+    self.titleLabel.textColor = UIColor.redColor;
     self.titleLabel.numberOfLines = 0;
     
     [self.contentView addSubview:self.titleLabel];
 }
 
-- (void)setupDescription
-{
+- (void)setupDescriptionLabel {
     self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 31, 235, 21)];
     self.descriptionLabel.textAlignment = NSTextAlignmentJustified;
     self.descriptionLabel.font = [UIFont systemFontOfSize:14.0f];
@@ -72,8 +66,7 @@
     [self.contentView addSubview:self.descriptionLabel];
 }
 
-- (void)setupAutoLayoutConstraintsForRow
-{
+- (void)setupAutoLayoutConstraintsForRow {
     [self.customImageView removeConstraints:self.customImageView.constraints];
     [self.titleLabel removeConstraints:self.titleLabel.constraints];
     [self.descriptionLabel removeConstraints:self.descriptionLabel.constraints];
