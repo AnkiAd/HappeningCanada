@@ -37,10 +37,10 @@
 
 - (void)setupRowDetailImageView {
     self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    self.customImageView.frame = CGRectMake(13, 8, 104, 84);
+    self.customImageView.frame = CGRectMake(13, 8, 104, 94);
     self.customImageView.clipsToBounds = YES;
     [self.customImageView setContentMode:UIViewContentModeScaleAspectFill];
-    self.customImageView.layer.cornerRadius = 5.0f;
+    self.customImageView.layer.cornerRadius = 10.0f;
     
     [self.contentView addSubview:self.customImageView];
 }
@@ -80,7 +80,7 @@
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_customImageView(==104)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_customImageView)]];
     
     // Height constraint of self.customImageView
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_customImageView(==84)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_customImageView)]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_customImageView(==94)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_customImageView)]];
     
     // Align self.customImageView, self.titleLabel from the left/right
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-13-[_customImageView]-13-[_titleLabel]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_customImageView, _titleLabel)]];
@@ -123,7 +123,7 @@
 
 #pragma mark - Calculating Cell Height
 
-float const minCellHeight = 100.0f;
+float const minCellHeight = 110.0f;
 
 - (CGFloat)getHeightOfCell {
     float width = CGRectGetWidth([[UIScreen mainScreen] bounds]) - 140;
