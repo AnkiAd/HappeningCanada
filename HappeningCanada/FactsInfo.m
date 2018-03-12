@@ -39,7 +39,7 @@
     if ([[dictionary valueForKey:@"rows"] isKindOfClass:[NSArray class]]) {
         NSMutableArray *arrTemp = [[NSMutableArray alloc] init];
         for (NSDictionary *dic in [dictionary valueForKey:@"rows"]) {
-            CanadaInfo *row = [[CanadaInfo alloc] initWithDictionary:dic];
+            CanadaInfoRow *row = [[CanadaInfoRow alloc] initWithDictionary:dic];
             [arrTemp addObject:row];
         }
         

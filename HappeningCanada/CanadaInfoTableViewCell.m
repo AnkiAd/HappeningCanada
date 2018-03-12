@@ -98,7 +98,7 @@
 #pragma mark - Property Assignmnet Method
 
 //Set the values in Row Elements
-- (void)setValuesToCell: (CanadaInfo *)canadaInfo {
+- (void)setValuesToCell: (CanadaInfoRow *)canadaInfo {
     self.titleLabel.text = canadaInfo.titleDetail;
     self.descriptionLabel.text = canadaInfo.descriptionDetail;
     

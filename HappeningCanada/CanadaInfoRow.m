@@ -6,9 +6,9 @@
 //  Copyright © 2018 Example. All rights reserved.
 //
 
-#import "CanadaInfo.h"
+#import "CanadaInfoRow.h"
 
-@implementation CanadaInfo
+@implementation CanadaInfoRow
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];

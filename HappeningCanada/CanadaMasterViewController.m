@@ -8,7 +8,7 @@
 
 #import "CanadaMasterViewController.h"
 #import "CanadaInfoTableViewCell.h"
-#import "CanadaInfo.h"
+#import "CanadaInfoRow.h"
 #import "NetworkClient.h"
 
 @interface CanadaMasterViewController ()
@@ -120,7 +120,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
         cell = [[CanadaInfoTableViewCell alloc] initCellWithReuseIdentifier:CellIdentifier];
     }
     
-    CanadaInfo *row = [factInfo.canadaInfoArray objectAtIndex:indexPath.row];
+    CanadaInfoRow *row = [factInfo.canadaInfoArray objectAtIndex:indexPath.row];
     [cell setValuesToCell:row];
     
     return cell;
@@ -136,7 +136,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
         cell = [[CanadaInfoTableViewCell alloc] initCellWithReuseIdentifier:CellIdentifier];
     });
     
-    CanadaInfo *row = [factInfo.canadaInfoArray objectAtIndex:indexPath.row];
+    CanadaInfoRow *row = [factInfo.canadaInfoArray objectAtIndex:indexPath.row];
     [cell setValuesToCell:row];
     
     return [cell getHeightOfCell];

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CanadaInfo : NSObject
+@interface CanadaInfoRow : NSObject
     @property (strong, nonatomic) NSString *titleDetail;
     @property (strong, nonatomic) NSString *descriptionDetail;
     @property (strong, nonatomic) NSString *imageHref;

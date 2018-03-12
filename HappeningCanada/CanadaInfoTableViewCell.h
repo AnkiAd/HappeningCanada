@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CanadaInfo.h"
+#import "CanadaInfoRow.h"
 
 @interface CanadaInfoTableViewCell : UITableViewCell
 
@@ -16,7 +16,7 @@
     @property (nonatomic, strong) UIImageView *customImageView;
 
 - (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier;
-- (void)setValuesToCell:(CanadaInfo *)canadaInfo;
+- (void)setValuesToCell:(CanadaInfoRow *)canadaInfo;
 - (CGFloat)getHeightOfCell;
 
 @end

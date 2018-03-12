@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CanadaInfo.h"
+#import "CanadaInfoRow.h"
 
 @interface FactsInfo : NSObject
 
