@@ -48,7 +48,7 @@
 - (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 5, 235, 21)];
     self.titleLabel.textAlignment = NSTextAlignmentLeft;
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
+    self.titleLabel.font = [UIFont boldSystemFontOfSize: 22.0f];
     self.descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.textColor = UIColor.redColor;
     self.titleLabel.numberOfLines = 0;
@@ -59,7 +59,7 @@
 - (void)setupDescriptionLabel {
     self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 31, 235, 21)];
     self.descriptionLabel.textAlignment = NSTextAlignmentJustified;
-    self.descriptionLabel.font = [UIFont systemFontOfSize:14.0f];
+    self.descriptionLabel.font = [UIFont systemFontOfSize:16.0f];
     self.descriptionLabel.lineBreakMode = NSLineBreakByCharWrapping;
     self.descriptionLabel.numberOfLines = 0;
     
