@@ -12,6 +12,6 @@ typedef void(^NDF_CompletionBlock)(NSDictionary *response, NSError *error);
 
 @interface NetworkClient : NSObject
 
-+ (void)fetchDataRowFromServerWithCompletion:(NDF_CompletionBlock)completionBlock;
++ (void)fetchDataFromNetwork:(NDF_CompletionBlock)completionBlock;
 
 @end

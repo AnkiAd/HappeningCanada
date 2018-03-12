@@ -13,15 +13,14 @@
 
 @implementation NetworkClient
 
-+ (void)fetchDataRowFromServerWithCompletion:(NDF_CompletionBlock)completionBlock {
++ (void)fetchDataFromNetwork:(NDF_CompletionBlock)completionBlock {
     // Represent a URL load request
     NSURL *URL = [NSURL URLWithString:CanadaFactsURLString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     
     // Creates a session with the specified session configuration.
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig];
-    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig];    
     
     [request setHTTPMethod:@"GET"];
     

@@ -80,7 +80,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
 
 - (void)fetchDataFromServer {
     [self showProgressIndicator];
-    [NetworkClient fetchDataRowFromServerWithCompletion:^(NSDictionary *response, NSError *error) {
+    [NetworkClient fetchDataFromNetwork:^(NSDictionary *response, NSError *error) {
         if (error) {
             NSLog(@"NetworkDataFetcher Error: %@", error);
             dispatch_async(dispatch_get_main_queue(), ^{

@@ -10,7 +10,7 @@
 
 @implementation CanadaInfoTableViewCell
 
-#pragma mark - Lifecycle & Init Methods
+#pragma mark - Lifecycle methods
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -33,17 +33,7 @@
     return self;
 }
 
-#pragma mark - Custom initialization methods
-
-- (void)setupRowDetailImageView {
-    self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    self.customImageView.frame = CGRectMake(13, 8, 104, 94);
-    self.customImageView.clipsToBounds = YES;
-    [self.customImageView setContentMode:UIViewContentModeScaleAspectFill];
-    self.customImageView.layer.cornerRadius = 10.0f;
-    
-    [self.contentView addSubview:self.customImageView];
-}
+#pragma mark - Setup UI Elements - Title, Desciption and ImageView
 
 - (void)setupTitleLabel {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 5, 235, 21)];
@@ -64,6 +54,16 @@
     self.descriptionLabel.numberOfLines = 0;
     
     [self.contentView addSubview:self.descriptionLabel];
+}
+
+- (void)setupRowDetailImageView {
+    self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
+    self.customImageView.frame = CGRectMake(13, 8, 104, 94);
+    self.customImageView.clipsToBounds = YES;
+    [self.customImageView setContentMode:UIViewContentModeScaleAspectFill];
+    self.customImageView.layer.cornerRadius = 10.0f;
+    
+    [self.contentView addSubview:self.customImageView];
 }
 
 - (void)setupAutoLayoutConstraintsForRow {
@@ -95,7 +95,7 @@
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-5-[_titleLabel]-5-[_descriptionLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_titleLabel, _descriptionLabel)]];
 }
 
-#pragma mark - Property Assignmnet Method
+#pragma mark - Assign values to UI Elements
 
 //Set the values in Row Elements
 - (void)setValuesToCell: (CanadaInfoRow *)canadaInfo {
@@ -123,7 +123,7 @@
     [task resume];
 }
 
-#pragma mark - Calculating Cell Height
+#pragma mark - Calculating Row Height
 
 float const minCellHeight = 110.0f;
 
@@ -144,7 +144,5 @@ float const minCellHeight = 110.0f;
     
     return (height < minCellHeight) ? minCellHeight : height;
 }
-
-
 
 @end
