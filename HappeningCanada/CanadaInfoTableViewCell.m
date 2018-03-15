@@ -7,6 +7,7 @@
 //
 
 #import "CanadaInfoTableViewCell.h"
+#import "Constants.h"
 
 @implementation CanadaInfoTableViewCell
 
@@ -57,7 +58,7 @@
 }
 
 - (void)setupRowDetailImageView {
-    self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
+    self.customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:PlaceholderImage]];
     self.customImageView.frame = CGRectMake(13, 8, 104, 94);
     self.customImageView.clipsToBounds = YES;
     [self.customImageView setContentMode:UIViewContentModeScaleAspectFill];
@@ -107,7 +108,7 @@
 
 //This method loads the images lazily from the ImageURL
 - (void)lazyLoadImageWithURLString: (NSString *)imgURLString {
-    self.customImageView.image = [UIImage imageNamed:@"placeholder"];
+    self.customImageView.image = [UIImage imageNamed:PlaceholderImage];
     
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:imgURLString]
     completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

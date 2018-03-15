@@ -8,8 +8,7 @@
 
 
 #import "NetworkClient.h"
-
-#define CanadaFactsURLString @"https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+#import "Constants.h"
 
 @implementation NetworkClient
 

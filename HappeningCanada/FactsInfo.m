@@ -7,6 +7,7 @@
 //
 
 #import "FactsInfo.h"
+#import "Constants.h"
 
 @implementation FactsInfo
 
@@ -28,17 +29,14 @@
         return NO;
     }
     
-    if ([dictionary valueForKey:@"title"] != [NSNull null] &&
-        [dictionary valueForKey:@"title"] != nil) {
-        self.screenTitle = [dictionary valueForKey:@"title"];
-    }
-    else {
-        self.screenTitle = @"Please Wait...";
+    if ([dictionary valueForKey:TitleKey] != [NSNull null] &&
+        [dictionary valueForKey:TitleKey] != nil) {
+        self.screenTitle = [dictionary valueForKey:TitleKey];
     }
     
-    if ([[dictionary valueForKey:@"rows"] isKindOfClass:[NSArray class]]) {
+    if ([[dictionary valueForKey:RowsKey] isKindOfClass:[NSArray class]]) {
         NSMutableArray *arrTemp = [[NSMutableArray alloc] init];
-        for (NSDictionary *dic in [dictionary valueForKey:@"rows"]) {
+        for (NSDictionary *dic in [dictionary valueForKey:RowsKey]) {
             CanadaInfoRow *row = [[CanadaInfoRow alloc] initWithDictionary:dic];
             [arrTemp addObject:row];
         }

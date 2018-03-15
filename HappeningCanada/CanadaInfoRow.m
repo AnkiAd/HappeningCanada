@@ -7,6 +7,7 @@
 //
 
 #import "CanadaInfoRow.h"
+#import "Constants.h"
 
 @implementation CanadaInfoRow
 
@@ -28,24 +29,24 @@
     }
     
     // Setting default values
-    self.titleDetail = @"";
-    self.descriptionDetail = @"";
-    self.imageHref = @"";
+    self.titleDetail = EmptyString;
+    self.descriptionDetail = EmptyString;
+    self.imageHref = EmptyString;
     
     // Setting values from Dictionary
-    if ([dictionary valueForKey:@"title"] != [NSNull null] &&
-        [dictionary valueForKey:@"title"] != nil) {
-        self.titleDetail = [dictionary valueForKey:@"title"];
+    if ([dictionary valueForKey:TitleKey] != [NSNull null] &&
+        [dictionary valueForKey:TitleKey] != nil) {
+        self.titleDetail = [dictionary valueForKey:TitleKey];
     }
     
-    if ([dictionary valueForKey:@"description"] != [NSNull null] &&
-        [dictionary valueForKey:@"description"] != nil) {
-        self.descriptionDetail = [dictionary valueForKey:@"description"];
+    if ([dictionary valueForKey:DescriptionKey] != [NSNull null] &&
+        [dictionary valueForKey:DescriptionKey] != nil) {
+        self.descriptionDetail = [dictionary valueForKey:DescriptionKey];
     }
     
-    if ([dictionary valueForKey:@"imageHref"] != [NSNull null] &&
-        [dictionary valueForKey:@"imageHref"] != nil) {
-        self.imageHref = [dictionary valueForKey:@"imageHref"];
+    if ([dictionary valueForKey:ImageHrefKey] != [NSNull null] &&
+        [dictionary valueForKey:ImageHrefKey] != nil) {
+        self.imageHref = [dictionary valueForKey:ImageHrefKey];
     }
     
     return YES;

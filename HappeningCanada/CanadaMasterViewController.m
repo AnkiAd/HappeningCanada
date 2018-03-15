@@ -10,6 +10,7 @@
 #import "CanadaInfoTableViewCell.h"
 #import "CanadaInfoRow.h"
 #import "NetworkClient.h"
+#import "Constants.h"
 
 @interface CanadaMasterViewController ()
 
@@ -18,8 +19,6 @@
 @implementation CanadaMasterViewController {
     UITableView *canadaMasterTableView;
 }
-
-static NSString *CellIdentifier = @"CanadaInfoCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,7 +81,7 @@ static NSString *CellIdentifier = @"CanadaInfoCell";
     [self showProgressIndicator];
     [NetworkClient fetchDataFromNetwork:^(NSDictionary *response, NSError *error) {
         if (error) {
-            NSLog(@"NetworkDataFetcher Error: %@", error);
+            NSLog(@"%@ %@", NetworkDataFetcherErrorMessage, error);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self hideProgressIndicator];
             });
