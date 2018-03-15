@@ -17,6 +17,7 @@
 		AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */; };
 		AFE7BC83205AA5B900566A62 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */; };
 		AFE7BC8B205AA67700566A62 /* HappeningCanadaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7BC8A205AA67700566A62 /* HappeningCanadaTests.m */; };
+		AFE7BCA1205AB29000566A62 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7BCA0205AB29000566A62 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		AFE7BC88205AA67700566A62 /* HappeningCanadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappeningCanadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE7BC8A205AA67700566A62 /* HappeningCanadaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappeningCanadaTests.m; sourceTree = "<group>"; };
 		AFE7BC8C205AA67700566A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE7BC9F205AB29000566A62 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AFE7BCA0205AB29000566A62 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +108,8 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
-				AFE7BC80205AA24200566A62 /* SupportingFiles */,
 				AF22F2ED2056912700272D3B /* App */,
+				AFE7BC80205AA24200566A62 /* SupportingFiles */,
 				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
 				AF6AEAAC2055EC4000B0B7F4 /* CustomTableViewCell */,
 				AF6AEAA72055DE5200B0B7F4 /* Networking */,
@@ -157,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				AFE7BC81205AA25900566A62 /* Constants.h */,
+				AFE7BC9F205AB29000566A62 /* Reachability.h */,
+				AFE7BCA0205AB29000566A62 /* Reachability.m */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			files = (
 				AF6AEAA62055DD0A00B0B7F4 /* FactsInfo.m in Sources */,
 				AF2E687C20530A6A002EB635 /* main.m in Sources */,
+				AFE7BCA1205AB29000566A62 /* Reachability.m in Sources */,
 				AF2E686E20530A6A002EB635 /* AppDelegate.m in Sources */,
 				AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */,
 				AF2E68DA20546AEB002EB635 /* CanadaInfoRow.m in Sources */,

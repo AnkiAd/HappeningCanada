@@ -6,11 +6,14 @@
 //  Copyright © 2018 Example. All rights reserved.
 //
 
+//This is the main view controller file where the service is called and data is displayed in the tableview
+
 #import "CanadaMasterViewController.h"
 #import "CanadaInfoTableViewCell.h"
 #import "CanadaInfoRow.h"
 #import "NetworkClient.h"
 #import "Constants.h"
+#import "Reachability.h"
 
 @interface CanadaMasterViewController ()
 
@@ -24,7 +27,7 @@
     [super viewDidLoad];
     
     [self setupInitialViews];
-    [self fetchDataFromServer];
+    [self checkInternetConnectionAndFetchDataFromServer];
     
     //Pull to refresh
     refreshControl = [[UIRefreshControl alloc] init];
@@ -35,7 +38,7 @@
 #pragma mark - Setup UI
 
 - (void)setupInitialViews {
-    // Initilizing TableView
+    // Creating TableView
     tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -72,11 +75,31 @@
 
 - (void)refreshTable {
     [refreshControl endRefreshing];
-    [self fetchDataFromServer];
+    [self checkInternetConnectionAndFetchDataFromServer];
 }
 
-#pragma mark Fetch Data from Server
+#pragma mark Networking Code
 
+//Check for the internet connection here
+//If  net is available then call the service to fetch data else show alert message to the user
+- (void)checkInternetConnectionAndFetchDataFromServer {
+    Reachability *internetReachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus netStatus = [internetReachability currentReachabilityStatus];
+    if (netStatus == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert" message:@"No internet connection" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        });
+    }
+    else {
+        [self fetchDataFromServer];
+    }
+}
+
+//Fetch Data from Server
 - (void)fetchDataFromServer {
     [self showProgressIndicator];
     [NetworkClient fetchDataFromNetwork:^(NSDictionary *response, NSError *error) {
