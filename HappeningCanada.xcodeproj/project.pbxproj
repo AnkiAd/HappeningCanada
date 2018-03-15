@@ -16,7 +16,18 @@
 		AF6AEAA62055DD0A00B0B7F4 /* FactsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */; };
 		AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */; };
 		AFE7BC83205AA5B900566A62 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */; };
+		AFE7BC8B205AA67700566A62 /* HappeningCanadaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE7BC8A205AA67700566A62 /* HappeningCanadaTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFE7BC8D205AA67700566A62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF2E686120530A6A002EB635 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF2E686820530A6A002EB635;
+			remoteInfo = HappeningCanada;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF2E686920530A6A002EB635 /* HappeningCanada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappeningCanada.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,10 +48,20 @@
 		AF6AEAA92055DE7F00B0B7F4 /* NetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClient.h; sourceTree = "<group>"; };
 		AFE7BC81205AA25900566A62 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AFE7BC88205AA67700566A62 /* HappeningCanadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappeningCanadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE7BC8A205AA67700566A62 /* HappeningCanadaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappeningCanadaTests.m; sourceTree = "<group>"; };
+		AFE7BC8C205AA67700566A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF2E686620530A6A002EB635 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE7BC85205AA67700566A62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +88,7 @@
 			children = (
 				AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */,
 				AF2E686B20530A6A002EB635 /* HappeningCanada */,
+				AFE7BC89205AA67700566A62 /* HappeningCanadaTests */,
 				AF2E686A20530A6A002EB635 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2E686920530A6A002EB635 /* HappeningCanada.app */,
+				AFE7BC88205AA67700566A62 /* HappeningCanadaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +161,15 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		AFE7BC89205AA67700566A62 /* HappeningCanadaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7BC8A205AA67700566A62 /* HappeningCanadaTests.m */,
+				AFE7BC8C205AA67700566A62 /* Info.plist */,
+			);
+			path = HappeningCanadaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +190,24 @@
 			productReference = AF2E686920530A6A002EB635 /* HappeningCanada.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFE7BC87205AA67700566A62 /* HappeningCanadaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFE7BC8F205AA67700566A62 /* Build configuration list for PBXNativeTarget "HappeningCanadaTests" */;
+			buildPhases = (
+				AFE7BC84205AA67700566A62 /* Sources */,
+				AFE7BC85205AA67700566A62 /* Frameworks */,
+				AFE7BC86205AA67700566A62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFE7BC8E205AA67700566A62 /* PBXTargetDependency */,
+			);
+			name = HappeningCanadaTests;
+			productName = HappeningCanadaTests;
+			productReference = AFE7BC88205AA67700566A62 /* HappeningCanadaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +220,11 @@
 					AF2E686820530A6A002EB635 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					AFE7BC87205AA67700566A62 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF2E686820530A6A002EB635;
 					};
 				};
 			};
@@ -187,6 +242,7 @@
 			projectRoot = "";
 			targets = (
 				AF2E686820530A6A002EB635 /* HappeningCanada */,
+				AFE7BC87205AA67700566A62 /* HappeningCanadaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +254,13 @@
 			files = (
 				AF2E687620530A6A002EB635 /* Assets.xcassets in Resources */,
 				AFE7BC83205AA5B900566A62 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFE7BC86205AA67700566A62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +281,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFE7BC84205AA67700566A62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE7BC8B205AA67700566A62 /* HappeningCanadaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFE7BC8E205AA67700566A62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF2E686820530A6A002EB635 /* HappeningCanada */;
+			targetProxy = AFE7BC8D205AA67700566A62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF2E687D20530A6A002EB635 /* Debug */ = {
@@ -355,6 +434,34 @@
 			};
 			name = Release;
 		};
+		AFE7BC90205AA67700566A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappeningCanadaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HappeningCanadaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappeningCanada.app/HappeningCanada";
+			};
+			name = Debug;
+		};
+		AFE7BC91205AA67700566A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappeningCanadaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HappeningCanadaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappeningCanada.app/HappeningCanada";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +479,15 @@
 			buildConfigurations = (
 				AF2E688020530A6A002EB635 /* Debug */,
 				AF2E688120530A6A002EB635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFE7BC8F205AA67700566A62 /* Build configuration list for PBXNativeTarget "HappeningCanadaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFE7BC90205AA67700566A62 /* Debug */,
+				AFE7BC91205AA67700566A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
