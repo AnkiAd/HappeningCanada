@@ -36,6 +36,7 @@
 		AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactsInfo.m; sourceTree = "<group>"; };
 		AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClient.m; sourceTree = "<group>"; };
 		AF6AEAA92055DE7F00B0B7F4 /* NetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClient.h; sourceTree = "<group>"; };
+		AFE7BC81205AA25900566A62 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
+				AFE7BC80205AA24200566A62 /* SupportingFiles */,
 				AF22F2ED2056912700272D3B /* App */,
 				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
 				AF6AEAAC2055EC4000B0B7F4 /* CustomTableViewCell */,
@@ -126,6 +128,14 @@
 				AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */,
 			);
 			name = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
+		AFE7BC80205AA24200566A62 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7BC81205AA25900566A62 /* Constants.h */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
