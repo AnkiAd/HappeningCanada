@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		AF2E686E20530A6A002EB635 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E686D20530A6A002EB635 /* AppDelegate.m */; };
 		AF2E687620530A6A002EB635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2E687520530A6A002EB635 /* Assets.xcassets */; };
-		AF2E687920530A6A002EB635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2E687720530A6A002EB635 /* LaunchScreen.storyboard */; };
 		AF2E687C20530A6A002EB635 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E687B20530A6A002EB635 /* main.m */; };
 		AF2E688420530CB6002EB635 /* CanadaMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */; };
 		AF2E688720530F91002EB635 /* CanadaInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */; };
 		AF2E68DA20546AEB002EB635 /* CanadaInfoRow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E68D920546AEB002EB635 /* CanadaInfoRow.m */; };
 		AF6AEAA62055DD0A00B0B7F4 /* FactsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */; };
 		AF6AEAAA2055DE7F00B0B7F4 /* NetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */; };
+		AFE7BC83205AA5B900566A62 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,6 @@
 		AF2E686C20530A6A002EB635 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF2E686D20530A6A002EB635 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AF2E687520530A6A002EB635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF2E687820530A6A002EB635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF2E687A20530A6A002EB635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF2E687B20530A6A002EB635 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF2E688220530CB6002EB635 /* CanadaMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanadaMasterViewController.h; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkClient.m; sourceTree = "<group>"; };
 		AF6AEAA92055DE7F00B0B7F4 /* NetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkClient.h; sourceTree = "<group>"; };
 		AFE7BC81205AA25900566A62 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,6 @@
 				AF2E686C20530A6A002EB635 /* AppDelegate.h */,
 				AF2E686D20530A6A002EB635 /* AppDelegate.m */,
 				AF2E687520530A6A002EB635 /* Assets.xcassets */,
-				AF2E687720530A6A002EB635 /* LaunchScreen.storyboard */,
 				AF2E687A20530A6A002EB635 /* Info.plist */,
 				AF2E687B20530A6A002EB635 /* main.m */,
 			);
@@ -66,6 +65,7 @@
 		AF2E686020530A6A002EB635 = {
 			isa = PBXGroup;
 			children = (
+				AFE7BC82205AA5B800566A62 /* Default-568h@2x.png */,
 				AF2E686B20530A6A002EB635 /* HappeningCanada */,
 				AF2E686A20530A6A002EB635 /* Products */,
 			);
@@ -196,8 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2E687920530A6A002EB635 /* LaunchScreen.storyboard in Resources */,
 				AF2E687620530A6A002EB635 /* Assets.xcassets in Resources */,
+				AFE7BC83205AA5B900566A62 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,17 +219,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AF2E687720530A6A002EB635 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF2E687820530A6A002EB635 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AF2E687D20530A6A002EB635 /* Debug */ = {
