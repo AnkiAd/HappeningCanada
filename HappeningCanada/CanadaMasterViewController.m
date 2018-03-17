@@ -37,11 +37,13 @@
 
 #pragma mark - Setup UI
 
+//This method set up up the tableview and add constraints to it.
 - (void)setupInitialViews {
     // Creating TableView
     tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     tableView.dataSource = self;
     tableView.delegate = self;
+    tableView.rowHeight = UITableViewAutomaticDimension;
     
     [self.view addSubview:tableView];
     
@@ -55,24 +57,27 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tableView)]];
 }
 
+//This method is used to show the progress indicator
 - (void)showProgressIndicator {
     
-    UIView *overlyView = [[UIView alloc] initWithFrame:self.view.frame];
-    overlyView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    UIView *overlayView = [[UIView alloc] initWithFrame:self.view.frame];
+    overlayView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
     
     progressView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    progressView.center = overlyView.center;
+    progressView.center = overlayView.center;
     [progressView startAnimating];
-    [overlyView addSubview:progressView];
+    [overlayView addSubview:progressView];
     
-    [self.view addSubview:overlyView];
-    [self.view bringSubviewToFront:overlyView];
+    [self.view addSubview:overlayView];
+    [self.view bringSubviewToFront:overlayView];
 }
 
+//This method is used to hide the progress indicator
 - (void)hideProgressIndicator {
     [[progressView superview] removeFromSuperview];
 }
 
+//This method is used with pull to refresh to refresh the table
 - (void)refreshTable {
     [refreshControl endRefreshing];
     [self checkInternetConnectionAndFetchDataFromServer];
