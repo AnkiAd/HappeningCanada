@@ -29,10 +29,6 @@
     [self setupInitialViews];
     [self checkInternetConnectionAndFetchDataFromServer];
     
-    //Pull to refresh
-    refreshControl = [[UIRefreshControl alloc] init];
-    [tableView addSubview:refreshControl];
-    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Setup UI
@@ -55,6 +51,11 @@
     
     // Align tableView from the top/bottom
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tableView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(tableView)]];
+    
+    // Pull to refresh
+    refreshControl = [[UIRefreshControl alloc] init];
+    [tableView addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
 }
 
 //This method is used to show the progress indicator

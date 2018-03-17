@@ -12,6 +12,6 @@ typedef void(^CompletionBlock)(NSDictionary *response, NSError *error);
 
 @interface NetworkClient : NSObject
 
-    + (void)fetchDataFromNetwork:(CompletionBlock)completionBlock;
++ (void)fetchDataFromNetwork:(CompletionBlock)completionBlock;
 
 @end

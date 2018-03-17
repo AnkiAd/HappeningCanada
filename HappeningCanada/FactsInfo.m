@@ -11,7 +11,6 @@
 
 @implementation FactsInfo
 
-
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if (self) {
@@ -46,7 +45,5 @@
     
     return YES;
 }
-
-
 
 @end
