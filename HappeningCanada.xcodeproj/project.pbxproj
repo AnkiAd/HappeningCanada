@@ -143,7 +143,7 @@
 				AF22F2ED2056912700272D3B /* App */,
 				AFE7BC80205AA24200566A62 /* SupportingFiles */,
 				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
-				AF6AEAAC2055EC4000B0B7F4 /* CustomTableViewCell */,
+				AF6AEAAC2055EC4000B0B7F4 /* Views */,
 				AF6AEAA72055DE5200B0B7F4 /* Networking */,
 				AF6AEAA32055DAE900B0B7F4 /* Model */,
 			);
@@ -179,13 +179,13 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		AF6AEAAC2055EC4000B0B7F4 /* CustomTableViewCell */ = {
+		AF6AEAAC2055EC4000B0B7F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AF2E688520530F91002EB635 /* CanadaInfoTableViewCell.h */,
 				AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */,
 			);
-			name = CustomTableViewCell;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		AFE7BC80205AA24200566A62 /* SupportingFiles */ = {
