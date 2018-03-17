@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^NDF_CompletionBlock)(NSDictionary *response, NSError *error);
+typedef void(^CompletionBlock)(NSDictionary *response, NSError *error);
 
 @interface NetworkClient : NSObject
 
-+ (void)fetchDataFromNetwork:(NDF_CompletionBlock)completionBlock;
+    + (void)fetchDataFromNetwork:(CompletionBlock)completionBlock;
 
 @end

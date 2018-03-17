@@ -15,8 +15,8 @@
     @property (nonatomic, strong) UILabel *descriptionLabel;
     @property (nonatomic, strong) UIImageView *customImageView;
 
-- (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier;
-- (void)setValuesToCell:(CanadaInfoRow *)canadaInfo;
-- (CGFloat)getHeightOfCell;
+    - (id)initCellWithReuseIdentifier:(NSString *)reuseIdentifier;
+    - (void)setValuesToCell:(CanadaInfoRow *)canadaInfo;
+    - (CGFloat)getHeightOfCell;
 
 @end
