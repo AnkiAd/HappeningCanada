@@ -104,14 +104,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		AF22F2ED2056912700272D3B /* App */ = {
-			isa = PBXGroup;
-			children = (
-				AF2E687A20530A6A002EB635 /* Info.plist */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
 		AF2E686020530A6A002EB635 = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +128,13 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
-				AF5C170B2060560900A5397E /* ViewControllers */,
-				AF5C170A206055C000A5397E /* SupportingFiles */,
 				AF5C17092060549F00A5397E /* App */,
-				AF22F2ED2056912700272D3B /* App */,
-				AF6AEAAC2055EC4000B0B7F4 /* Views */,
-				AF6AEAA72055DE5200B0B7F4 /* Networking */,
-				AF6AEAA32055DAE900B0B7F4 /* Model */,
+				AF2E687A20530A6A002EB635 /* Info.plist */,
+				AF5C170D206056FE00A5397E /* Model */,
+				AF5C170E2060570600A5397E /* Networking */,
+				AF5C170A206055C000A5397E /* SupportingFiles */,
+				AF5C170B2060560900A5397E /* ViewControllers */,
+				AF5C170F2060571900A5397E /* Views */,
 			);
 			path = HappeningCanada;
 			sourceTree = "<group>";
@@ -177,7 +169,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		AF6AEAA32055DAE900B0B7F4 /* Model */ = {
+		AF5C170D206056FE00A5397E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AF2E68D820546AEB002EB635 /* CanadaInfoRow.h */,
@@ -185,25 +177,25 @@
 				AF6AEAA42055DD0A00B0B7F4 /* FactsInfo.h */,
 				AF6AEAA52055DD0A00B0B7F4 /* FactsInfo.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		AF6AEAA72055DE5200B0B7F4 /* Networking */ = {
+		AF5C170E2060570600A5397E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				AF6AEAA92055DE7F00B0B7F4 /* NetworkClient.h */,
 				AF6AEAA82055DE7E00B0B7F4 /* NetworkClient.m */,
 			);
-			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		AF6AEAAC2055EC4000B0B7F4 /* Views */ = {
+		AF5C170F2060571900A5397E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AF2E688520530F91002EB635 /* CanadaInfoTableViewCell.h */,
 				AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AFE7BC89205AA67700566A62 /* HappeningCanadaTests */ = {
