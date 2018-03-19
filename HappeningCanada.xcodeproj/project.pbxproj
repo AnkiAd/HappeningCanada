@@ -136,10 +136,10 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
+				AF5C170B2060560900A5397E /* ViewControllers */,
+				AF5C170A206055C000A5397E /* SupportingFiles */,
 				AF5C17092060549F00A5397E /* App */,
 				AF22F2ED2056912700272D3B /* App */,
-				AFE7BC80205AA24200566A62 /* SupportingFiles */,
-				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
 				AF6AEAAC2055EC4000B0B7F4 /* Views */,
 				AF6AEAA72055DE5200B0B7F4 /* Networking */,
 				AF6AEAA32055DAE900B0B7F4 /* Model */,
@@ -156,6 +156,25 @@
 				AF2E687B20530A6A002EB635 /* main.m */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AF5C170A206055C000A5397E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AFE7BC81205AA25900566A62 /* Constants.h */,
+				AFE7BCA0205AB29000566A62 /* Reachability.m */,
+				AFE7BC9F205AB29000566A62 /* Reachability.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AF5C170B2060560900A5397E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */,
+				AF2E688220530CB6002EB635 /* CanadaMasterViewController.h */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		AF6AEAA32055DAE900B0B7F4 /* Model */ = {
@@ -178,15 +197,6 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				AF2E688220530CB6002EB635 /* CanadaMasterViewController.h */,
-				AF2E688320530CB6002EB635 /* CanadaMasterViewController.m */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
 		AF6AEAAC2055EC4000B0B7F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,16 +204,6 @@
 				AF2E688620530F91002EB635 /* CanadaInfoTableViewCell.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		AFE7BC80205AA24200566A62 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				AFE7BC81205AA25900566A62 /* Constants.h */,
-				AFE7BC9F205AB29000566A62 /* Reachability.h */,
-				AFE7BCA0205AB29000566A62 /* Reachability.m */,
-			);
-			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		AFE7BC89205AA67700566A62 /* HappeningCanadaTests */ = {
