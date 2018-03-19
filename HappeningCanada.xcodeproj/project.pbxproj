@@ -107,11 +107,7 @@
 		AF22F2ED2056912700272D3B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				AF2E686C20530A6A002EB635 /* AppDelegate.h */,
-				AF2E686D20530A6A002EB635 /* AppDelegate.m */,
-				AF2E687520530A6A002EB635 /* Assets.xcassets */,
 				AF2E687A20530A6A002EB635 /* Info.plist */,
-				AF2E687B20530A6A002EB635 /* main.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -140,6 +136,7 @@
 		AF2E686B20530A6A002EB635 /* HappeningCanada */ = {
 			isa = PBXGroup;
 			children = (
+				AF5C17092060549F00A5397E /* App */,
 				AF22F2ED2056912700272D3B /* App */,
 				AFE7BC80205AA24200566A62 /* SupportingFiles */,
 				AF6AEAAB2055EC2B00B0B7F4 /* ViewControllers */,
@@ -148,6 +145,17 @@
 				AF6AEAA32055DAE900B0B7F4 /* Model */,
 			);
 			path = HappeningCanada;
+			sourceTree = "<group>";
+		};
+		AF5C17092060549F00A5397E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF2E686C20530A6A002EB635 /* AppDelegate.h */,
+				AF2E687520530A6A002EB635 /* Assets.xcassets */,
+				AF2E686D20530A6A002EB635 /* AppDelegate.m */,
+				AF2E687B20530A6A002EB635 /* main.m */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		AF6AEAA32055DAE900B0B7F4 /* Model */ = {
